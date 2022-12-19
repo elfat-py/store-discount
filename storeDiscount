@@ -1,0 +1,50 @@
+#include<iostream>
+#include<cmath>
+#include <string>
+using namespace std;
+
+int main (){
+
+    int unitPrice= 50, quantity;
+    double discount, total, totalWithoutDiscount;
+    
+    cout<<"Enter the number of items you wish to purchase: ";
+    cin>>quantity;
+
+    if (quantity>0 && quantity<10)
+    {
+        totalWithoutDiscount= unitPrice*quantity;
+        discount= totalWithoutDiscount*0/100;
+        total= totalWithoutDiscount-discount;
+        cout<<"The total after the discount of "<<"0%"<< "for the numbers of units you want to purchase is: "<<total<<"."<<endl<<"Thank you!";
+ 
+    }else if (quantity>9 && quantity<50)
+    {
+        totalWithoutDiscount= unitPrice*quantity;
+        discount= totalWithoutDiscount*3/100;
+        total= totalWithoutDiscount-discount;
+        cout<<"The total after the discount of  "<<"3%"<< "for the numbers of units you want to purchase is: "<<total<<"."<<endl<<"Thank you!";
+
+    }else if (quantity>49 && quantity<100)
+    {
+        totalWithoutDiscount= unitPrice*quantity;
+        discount= totalWithoutDiscount*5/100;
+        total= totalWithoutDiscount-discount;
+        cout<<"The total after the discount of "<<"5%"<< " for the numbers of units you want to purchase is: "<<total<<"."<<endl<<"Thank you!";
+
+    }else if (quantity>100)
+    {       
+        totalWithoutDiscount= unitPrice*quantity;
+        discount= totalWithoutDiscount*10/100;
+        total= totalWithoutDiscount-discount;
+        cout<<"The total after the discount of "<<"10%"<< " for the numbers of units you want to purchase is: "<<total<<"."<<endl<<"Thank you!";
+
+    }else{
+        cout<<"Something went wrong try again!";
+
+
+    }
+    
+    
+    return 0;
+}
